@@ -10,6 +10,10 @@ const Setting = () => {
     setTabData('');
   }
 
+  const handleOption = (e) => {
+    e.target.classList.toggle('active');
+  }
+
   return (
     <div className='settingspage'>
       <button className='closebutton' onClick={() => handleClose()}>
@@ -23,7 +27,7 @@ const Setting = () => {
             <div className='setting-description'>Any revealed hints must be used in subsequent guesses</div>
           </div>
           <div className='toggle-div'>
-            <label className="switch">
+            <label className="switch" onClick={(event) => handleOption(event)}>
               <span className="slider round"></span>
             </label>
           </div>
@@ -33,21 +37,33 @@ const Setting = () => {
             <div className='setting-heading'>Dark Mode</div>
             <div className='setting-description'>Change light and dark mode</div>
           </div>
-          <div className='toggle-div'></div>
+          <div className='toggle-div'>
+            <label className="switch" onClick={(event) => handleOption(event)}>
+              <span className="slider round"></span>
+            </label>
+          </div>
         </div>
         <div className='menu-option'>
           <div className='setting-info'>
             <div className='setting-heading'>Color Blind Mode</div>
             <div className='setting-description'>High contrast colors</div>
           </div>
-          <div className='toggle-div'></div>
+          <div className='toggle-div'>
+            <label className="switch" onClick={(event) => handleOption(event)}>
+              <span className="slider round"></span>
+            </label>
+          </div>
         </div>
         <div className='menu-option'>
           <div className='setting-info'>
             <div className='setting-heading'>Confetti Animations</div>
             <div className='setting-description'>Confetti animations when the game is won</div>
           </div>
-          <div className='toggle-div'></div>
+          <div className='toggle-div'>
+            <label className="switch" onClick={(event) => handleOption(event)}>
+              <span className="slider round"></span>
+            </label>
+          </div>
         </div>
       </div>
     </div>
