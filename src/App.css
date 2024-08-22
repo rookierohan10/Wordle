@@ -2,3 +2,7 @@
     width: 700px;
     height: 100vmin;
 }
+
+.app.dark{
+    background-color: black;
+}
